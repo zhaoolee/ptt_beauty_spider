@@ -1,2 +1,7 @@
 # ptt_beauty_spider
-# ptt_beauty_spider
+
+
+npm i
+
+
+npm run start

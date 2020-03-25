@@ -5,13 +5,24 @@ const cheerio = require("cheerio");
 const download = require("download");
 const path = require("path");
 
+
 function page_to_url(page) {
-  let end_date = moment().format("YYYY-MM-DD+HH:mm:ss");
-  let url =
-    "https://beautyptt.cc/extend/?EndDate=" +
-    end_date +
-    "&infinite_json&page=" +
-    page;
+
+  let url = "";
+
+  // 所有图片
+  // let end_date = moment().format("YYYY-MM-DD+HH:mm:ss");
+  // url =
+  //   "https://beautyptt.cc/extend/?EndDate=" +
+  //   end_date +
+  //   "&infinite_json&page=" +
+  //   page;
+  
+  // 正妹
+  url = "https://beautyptt.cc/extend/?search=search&title=正妹&author=&infinite_json&page="+page
+
+  url = encodeURI(url)
+
   return url;
 }
 
